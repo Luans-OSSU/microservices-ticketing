@@ -4,8 +4,6 @@ import { app } from "../app";
 
 let mongo: any;
 
-jest.setTimeout(300000)
-
 beforeAll(async () => {
   process.env.JWT_KEY = "test_key";
 

@@ -12,14 +12,14 @@ spec:
       labels:
         app: auth
     spec:
-      containers: 
+      containers:
         - name: auth
-          image: gcr.io/ticketing-dev-280517/auth
+          image: luans/auth
           env:
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
-                  name: jwt-secrete
+                  name: jwt-secret
                   key: JWT_KEY
 ---
 apiVersion: v1
@@ -34,4 +34,3 @@ spec:
       protocol: TCP
       port: 3000
       targetPort: 3000
-          
